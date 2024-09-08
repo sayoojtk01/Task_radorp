@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    Seasonal offers Tree-->
+    <record id="seasonal_offers_tree" model="ir.ui.view">
+        <field name="name">seasonal.offers.tree</field>
+        <field name="model">seasonal.offers</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="product_id"/>
+                <field name="analytic_account_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--    Seasonal offers Form-->
+    <record id="seasonal_offers_form" model="ir.ui.view">
+        <field name="name">seasonal.offers.form</field>
+        <field name="model">seasonal.offers</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="product_id"/>
+                        <field name="analytic_account_id" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--    Seasonal offers Action-->
+    <record id="action_seasonal_offers" model="ir.actions.act_window">
+        <field name="name">Seasonal Offers</field>
+        <field name="res_model">seasonal.offers</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="seasonal_offers_tree"/>
+    </record>
+
+<!--    Seasonal Offers Menus-->
+    <menuitem
+            id="menu_seasonal_offers_root"
+            name="Seasonal Offers"
+            parent="sale.menu_sale_config"
+            sequence="35"
+    />
+
+    <menuitem
+            id="menu_seasonal_offers"
+            name="Offers"
+            parent="menu_seasonal_offers_root"
+            action="action_seasonal_offers"
+    />
+
+</odoo>

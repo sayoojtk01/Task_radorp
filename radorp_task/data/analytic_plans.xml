@@ -1,0 +1,13 @@
+<odoo>
+<!--    Analytic plans creation-->
+    <data>
+        <record id="seasonal_offers_plan" model="account.analytic.plan">
+            <field name="name">Seasonal Offers</field>
+        </record>
+
+        <record id="customer_account_plan" model="account.analytic.plan">
+            <field name="name">Customer Account</field>
+        </record>
+    </data>
+
+</odoo>

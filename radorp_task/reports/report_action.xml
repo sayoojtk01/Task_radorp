@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    Excel report action for extract account move lines report-->
+      <record id="acton_extract_move_line_report" model="ir.actions.report">
+        <field name="name">Extract Account Move Lines Report</field>
+        <field name="model">extract.move.line</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">radorp_task.extract_move_line_report_excel</field>
+        <field name="report_file">radorp_task.extract_move_line_report_excel</field>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>
